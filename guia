@@ -1,0 +1,19 @@
+PARA TRAZER O REPOSITÓRIO PARA MEU PC 
+
+1 - Criar repositório no github
+2 - abrir o gitbash na pasta que quero clonar e rodo o comando:
+git clone URL DO REPO
+
+PARA ATUALIZAR O REPO (APÓS FAZER AS ALTERAÇÕES NO ARQUIVO E SALVAR)
+
+1 - git status    (vermelho)
+2 - git add . 
+3 - git status    (verde)
+4 - git commit -m "NOME DO COMMIT"
+5 - git push
+
+A PRIMEIRA VEZ QUE VOCÊ FOR USAR O GIT EM UMA MÁQUINA PODENDO SER
+UMA MAQUINA MINHA:
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
