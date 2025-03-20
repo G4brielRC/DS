@@ -12,8 +12,7 @@ PARA ATUALIZAR O REPO (APÓS FAZER AS ALTERAÇÕES NO ARQUIVO E SALVAR)
 4 - git commit -m "NOME DO COMMIT"
 5 - git push
 
-A PRIMEIRA VEZ QUE VOCÊ FOR USAR O GIT EM UMA MÁQUINA PODENDO SER
-UMA MAQUINA MINHA:
+A PRIMEIRA VEZ QUE VOCÊ FOR USAR O GIT EM UMA MÁQUINA:
 
   git config --global user.email "you@example.com"
   git config --global user.name "Your Name"
