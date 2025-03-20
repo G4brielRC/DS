@@ -1,0 +1,47 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        //Declarando Variaveis//
+        Console.WriteLine("Escreva seu Nome: ");
+        string nome = "Gabriel";
+        int idade = 18;
+        decimal saldobancario = 1500.75m;
+        bool contaAtiva = true;
+        char categoriaCliente = 'A'; // A = VIP B = Comum//
+
+        Console.WriteLine("Cadastro do Cliente");
+        Console.WriteLine("Nome: " + nome);
+        Console.WriteLine("Idade: " + idade + " anos");
+        Console.WriteLine("Saldo Bancário: R$ " + saldobancario);
+        Console.WriteLine("Conta Ativa? " + contaAtiva);
+        Console.WriteLine("Categoria do Cliente: " + categoriaCliente);
+        Console.WriteLine("---------------------------------------------------");
+
+        //------------------------------------------------------------//
+
+        string produto = "Camisetas";
+        string codProduto = "001375";
+        decimal precoProduto = 44.99m;
+        int estoqueProduto = 250;
+        bool disponibilidade = false;
+
+
+        Console.WriteLine("Produto Disponível: " + produto);
+        Console.WriteLine("Código do Produto: " + codProduto);
+        Console.WriteLine("Preço do Produto: R$ " + precoProduto);
+        Console.WriteLine("Quantidade no Estoque: " + estoqueProduto + " Unidades");
+        Console.Write("O Produto está disponível?: " + (disponibilidade ? "Sim" : "Não"));
+
+        // if (disponibilidade == true) 
+        //Console.WriteLine("Sim");----> ?
+        //else                          
+        //Console.WriteLine("Não");---> :
+
+    
+
+    }
+}
+
