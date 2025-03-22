@@ -1,0 +1,70 @@
+using System;
+
+class Program
+{
+    
+    static void Main()
+    {
+        Console.WriteLine("----------------CALCULADORA---------------");
+        
+        Console.WriteLine("Digite o primeiro numero");
+        
+        string num1 = Console.ReadLine();
+        
+        Console.WriteLine("Digite o segundo número");
+        
+        string num2 = Console.ReadLine();
+        
+        double numero1 = double.Parse(num1);
+        double numero2 = double.Parse(num2);
+        
+        Console.WriteLine("-------------------------------------------------------------------------------------------------------------------");
+        Console.WriteLine("Digite um número para realizar uma operação: 1 para Adição, 2 para Subtração, 3 para Multiplicação e 4 para Divisão");
+        Console.WriteLine("--------------------------------------------------------------------------------------------------------------------");
+        
+        string operador = Console.ReadLine();
+        int n_operador = int.Parse(operador);
+        
+        switch(n_operador){
+            
+            case 1:
+            Console.WriteLine("ADIÇÃO");
+            
+            Console.WriteLine(numero1 + numero2);
+            break;
+            
+            case 2:
+            Console.WriteLine("SUBTRAÇÃO");
+            
+            Console.WriteLine(numero1 - numero2);
+            break;
+            
+            case 3:
+            Console.WriteLine("MULTIPLICAÇÃO");    
+        
+            Console.WriteLine(numero1 * numero2);
+            break;
+            
+            case 4:
+            Console.WriteLine("DIVISÃO");
+            
+            if(numero2 !=0)
+            {
+                Console.WriteLine(numero1 / numero2);
+            }
+            
+            else
+            {
+                Console.WriteLine("ERRO!! DIVISÃO POR 0");
+            }
+            break;
+            
+            default:
+            Console.WriteLine("Inválido");
+            break;
+            
+        }
+ 
+    }
+    
+}
