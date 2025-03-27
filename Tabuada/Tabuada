@@ -1,0 +1,37 @@
+using System;
+
+class Program {
+    
+    static void Main()
+    {
+        bool reiniciar;
+        
+        do
+        {
+            Console.WriteLine("------------TABUADA------------");
+    
+            Console.WriteLine("Digite um número: ");
+            string num = Console.ReadLine();
+            int numero = int.Parse(num);
+
+            Console.WriteLine("\n Tabuada do " + num + ":");
+            Console.WriteLine("------------");
+            
+            for (int i = 1; i <= 10; i++)
+        {
+            int resultado = numero * i;
+            Console.WriteLine(numero + " x " + i + " = " + resultado);
+            
+        }
+        
+        Console.WriteLine("-------------");
+            
+        Console.WriteLine("\n Digite S para reiniciar o programa ou qualquer outra tecla para encerrar");
+            
+        string opcao = Console.ReadLine();
+            
+        reiniciar = (opcao.ToUpper() == "S");
+    
+        } while (reiniciar);
+    }
+}
