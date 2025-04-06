@@ -1,0 +1,176 @@
+using System;
+
+class Program {
+    
+  static void Main() {
+      
+     string repetir; // Variável que controla se o programa será repetido
+      
+    // Início do laço que permite repetir a execução
+    do {  
+      
+        Console.WriteLine("\n-------CONSULTA DE CARROS-------\n");
+        
+        // Arrays com os nomes dos carros por categoria
+        string [] carros_hatch = {"Volkswagen Gol", "Chevrolet Onix", "Fiat Fiesta \n"};
+        string [] carros_sedan = {"Honda Civic", "Toyota Corolla", "Chevrolet Prisma \n"};
+        string [] carros_suv = {"Volkswagen T-Cross", "Hyundai Creta", "Jeep Renagade \n"};
+        
+        // Arrays com os dados de carros HATCH
+        string [] precos_hatch = { "R$ 52.000", "R$ 65.000", "R$ 48.000" };
+        string [] motores_hatch = { "1.6 Flex", "1.0 Turbo", "1.4 Flex" };
+        string [] consumo_hatch = { "12 km/L", "14 km/L", "13 km/L" };
+        
+        // Arrays com os dados de carros SEDAN
+        string [] precos_sedan = { "R$ 130.000", "R$ 125.000", "R$ 75.000" };
+        string [] motores_sedan = { "2.0 Flex", "2.0 Flex", "1.4 Flex" };
+        string [] consumo_sedan = { "9.5 km/L", "10 km/L", "12 km/L" };
+    
+        // Arrays com os dados de carros SUV
+        string [] precos_suv = { "R$ 110.000", "R$ 120.000", "R$ 140.000" };
+        string [] motores_suv = { "1.4 Turbo", "2.0 Flex", "1.8 Flex" };
+        string [] consumo_suv = { "10 km/L", "9 km/L", "8.5 km/L" };
+        
+        // Apresenta as opções de categoria
+        Console.WriteLine("ESCOLHA UMA CATEGORIA DE CARRO: \n");
+        Console.WriteLine("1 - HATCH");
+        Console.WriteLine("2 - SEDAN");
+        Console.WriteLine("3 - SUV \n");
+        
+        string opcao = Console.ReadLine(); // Lê a escolha da categoria
+        
+        // Início do switch com base na categoria escolhida
+        switch(opcao)
+        {
+            // Caso HATCH
+            case "1":
+                Console.WriteLine("Categoria: HATCH\n");
+                Console.WriteLine("Estes são os Carros HATCH disponíveis: \n");
+                
+                // Lista os carros HATCH
+                Console.WriteLine("1-" + carros_hatch[0]);
+                Console.WriteLine("2-" + carros_hatch[1]);
+                Console.WriteLine("3-" + carros_hatch[2]);
+                    
+                Console.WriteLine("Escolha um desses modelos: ");
+                    
+                string escolha_hatch = Console.ReadLine(); // Lê o modelo escolhido
+                    
+                // Switch que trata o modelo específico do HATCH
+                switch(escolha_hatch)
+                {
+                    // Opções de HATCH e suas infromações
+                    case "1":
+                        Console.WriteLine("\nModelo escolhido: " + carros_hatch[0]);
+                        Console.WriteLine("Preço: " + precos_hatch[0]);
+                        Console.WriteLine("Motor: " + motores_hatch[0]);
+                        Console.WriteLine("Consumo; " + consumo_hatch[0]);
+                        break;
+                        
+                    case "2":
+                        Console.WriteLine("\nModelo escolhido: " + carros_hatch[1]);
+                        Console.WriteLine("Preço: " + precos_hatch[1]);
+                        Console.WriteLine("Motor: " + motores_hatch[1]);
+                        Console.WriteLine("Consumo; " + consumo_hatch[1]);
+                        break;
+                        
+                    case "3":
+                        Console.WriteLine("\nModelo escolhido: " + carros_hatch[2]);
+                        Console.WriteLine("Preço: " + precos_hatch[2]);
+                        Console.WriteLine("Motor: " + motores_hatch[2]);
+                        Console.WriteLine("Consumo; " + consumo_hatch[2]);
+                        break;
+                }
+                break;
+                
+            // Caso SEDAN
+            case "2":
+                Console.WriteLine("Categoria: SEDAN\n");
+                Console.WriteLine("Estes são os Carros SEDAN disponíveis: \n");
+                
+                // Lista os carros SEDAN
+                Console.WriteLine("1-" + carros_sedan[0]);
+                Console.WriteLine("2-" + carros_sedan[1]);
+                Console.WriteLine("3-" + carros_sedan[2]);
+                
+                string escolha_sedan = Console.ReadLine(); // Lê o modelo escolhido
+
+                // Switch que trata o modelo específico do SEDAN
+                switch(escolha_sedan)
+                {
+                  // Opções de SEDAN e suas infromações
+                    case "1":
+                        Console.WriteLine("\nModelo escolhido: " + carros_sedan[0]);
+                        Console.WriteLine("Preço: " + precos_sedan[0]);
+                        Console.WriteLine("Motor: " + motores_sedan[0]);
+                        Console.WriteLine("Consumo; " + consumo_sedan[0]);
+                        break;
+                        
+                    case "2":
+                        Console.WriteLine("\nModelo escolhido: " + carros_sedan[1]);
+                        Console.WriteLine("Preço: " + precos_sedan[1]);
+                        Console.WriteLine("Motor: " + motores_sedan[1]);
+                        Console.WriteLine("Consumo; " + consumo_sedan[1]);
+                        break;
+                        
+                    case "3":
+                        Console.WriteLine("\nModelo escolhido: " + carros_sedan[2]);
+                        Console.WriteLine("Preço: " + precos_sedan[2]);
+                        Console.WriteLine("Motor: " + motores_sedan[2]);
+                        Console.WriteLine("Consumo; " + consumo_sedan[2]);
+                        break;
+                }
+                break;
+                
+            // Caso SUV
+            case "3":
+                Console.WriteLine("Categoria: SUV\n");
+                Console.WriteLine("Estes são os Carros SUV disponíveis: \n");
+                
+                // Lista os carros SUV
+                Console.WriteLine("1-" + carros_suv[0]);
+                Console.WriteLine("2-" + carros_suv[1]);
+                Console.WriteLine("3-" + carros_suv[2]);
+                    
+                string escolha_suv = Console.ReadLine(); // Lê o modelo escolhido
+
+                // Switch que trata o modelo específico do SUV
+                switch(escolha_suv)
+                {
+                    // Opções de SUV e suas infromações
+                    case "1":
+                        Console.WriteLine("\nModelo escolhido: " + carros_suv[0]);
+                        Console.WriteLine("Preço: " + precos_suv[0]);
+                        Console.WriteLine("Motor: " + motores_suv[0]);
+                        Console.WriteLine("Consumo; " + consumo_suv[0]);
+                        break;
+                        
+                    case "2":
+                        Console.WriteLine("\nModelo escolhido: " + carros_suv[1]);
+                        Console.WriteLine("Preço: " + precos_suv[1]);
+                        Console.WriteLine("Motor: " + motores_suv[1]);
+                        Console.WriteLine("Consumo; " + consumo_suv[1]);
+                        break;
+                        
+                    case "3":
+                        Console.WriteLine("\nModelo escolhido: " + carros_suv[2]);
+                        Console.WriteLine("Preço: " + precos_suv[2]);
+                        Console.WriteLine("Motor: " + motores_suv[2]);
+                        Console.WriteLine("Consumo; " + consumo_suv[2]);
+                        break;
+                }
+                break;
+                
+            // Caso a entrada seja inválida
+            default:
+                Console.WriteLine("VALOR INVÁLIDO");
+                break;
+        }
+
+        // Pergunta se o usuário quer repetir o programa
+        Console.WriteLine("\nDeseja realizar o programa novamente? Digite 'S' para sim");
+        repetir = Console.ReadLine();
+        
+    } while (repetir.ToUpper() == "S"); // Repete enquanto digitar "S"
+  }
+}
