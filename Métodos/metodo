@@ -1,0 +1,50 @@
+using System;
+
+class Program {
+    
+     static double CalcularSoma (double n1, double n2, double n3)
+  {
+      return (n1 + n2 + n3);
+      
+  }
+    
+   static void Main() {
+      
+    Console.WriteLine("--------MÉTODOS--------\n");
+    
+    Console.WriteLine("------SOMA------\n");
+    
+    Console.Write("Digite o primero número: ");
+    double n1 = double.Parse (Console.ReadLine());
+    
+    Console.Write("Digite o segundo número: ");
+    double n2 = double.Parse (Console.ReadLine());
+    
+    Console.Write("Digite o terceiro número: ");
+    double n3 = double.Parse (Console.ReadLine());
+    
+    double soma = CalcularSoma(n1, n2, n3);
+    
+    Console.WriteLine("A soma dos números é: " + soma + "\n");
+    
+    Console.WriteLine("-----------------------------------------------------------------------");
+
+
+/* using System;
+
+class Program {
+    
+    static void Saudacao(string nome)
+    {
+        Console.WriteLine("Olá " + nome);
+    }
+
+    static void Main()
+    {
+        Console.WriteLine("------SAUDAÇÃO-----");
+        
+        Saudacao(" dfdhfuihf");
+    }
+}
+
+*/
