@@ -29,22 +29,7 @@ class Program {
     
     Console.WriteLine("-----------------------------------------------------------------------");
 
-
-/* using System;
-
-class Program {
-    
-    static void Saudacao(string nome)
-    {
-        Console.WriteLine("Olá " + nome);
-    }
-
-    static void Main()
-    {
-        Console.WriteLine("------SAUDAÇÃO-----");
-        
-        Saudacao(" dfdhfuihf");
     }
 }
 
-*/
+
