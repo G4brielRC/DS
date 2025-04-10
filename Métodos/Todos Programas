@@ -1,0 +1,67 @@
+using System;
+
+class Program {
+
+   
+    static double CalcularSoma(double n1, double n2, double n3)
+    {
+        return (n1 + n2 + n3);
+    }
+
+    static void Saudacao()
+    {
+        Console.Write("Escreva seu nome: ");
+        string nome = Console.ReadLine();
+        Console.WriteLine("Olá " + nome);
+    }
+
+
+    static void Multiplos()
+    {
+        Console.Write("Escreva um número: ");
+        int num = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Você digitou o número: " + num);
+
+        if (num % 5 == 0)
+        {
+            Console.WriteLine(num + " é múltiplo de 5");
+        }
+        else
+        {
+            Console.WriteLine(num + " Não é múltiplo de 5");
+        }
+    }
+
+    static void Main()
+    {
+
+        Console.WriteLine("--------MÉTODOS--------\n");
+        
+        Console.WriteLine("------SOMA------\n");
+        
+        Console.Write("Digite o primeiro número: ");
+        double n1 = double.Parse(Console.ReadLine());
+        
+        Console.Write("Digite o segundo número: ");
+        double n2 = double.Parse(Console.ReadLine());
+        
+        Console.Write("Digite o terceiro número: ");
+        double n3 = double.Parse(Console.ReadLine());
+        
+        double soma = CalcularSoma(n1, n2, n3);
+        Console.WriteLine("A soma dos números é: " + soma + "\n");
+        
+        Console.WriteLine("-----------------------------------------------------------------------\n");
+        
+
+        Console.WriteLine("------SAUDAÇÃO-----\n");
+        Saudacao();
+        
+        Console.WriteLine("-----------------------------------------------------------------------\n");
+        
+
+        Console.WriteLine("------MÚLTIPLOS-----\n");
+        Multiplos();
+    }
+}
