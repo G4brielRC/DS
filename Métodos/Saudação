@@ -1,0 +1,21 @@
+using System;
+
+class Program {
+    
+    static void Saudacao()
+    {
+          Console.Write("Escreva seu nome: ");
+        string nome = (Console.ReadLine());
+        
+        Console.WriteLine("Olá " + nome);
+    }
+
+    static void Main()
+    {
+        Console.WriteLine("------SAUDAÇÃO-----");
+        
+        
+        Saudacao();
+    
+    }
+}
