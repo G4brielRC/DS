@@ -1,0 +1,46 @@
+using System;
+
+class Classe
+{
+    public string nome;
+    public string local1;
+    public string local2;
+    public string local3;
+
+    public static void Main()
+    {
+        Classe Saudacao = new Classe();
+        
+        
+        Console.WriteLine("------SAUDAÇÃO-----\n");
+        
+        Console.Write("Escreva seu nome: ");
+        
+        Saudacao.nome = Console.ReadLine();
+        
+        Console.WriteLine("Olá " + Saudacao.nome + ", seja bem-vindo!\n");
+    
+
+        Classe Viagem = new Classe();
+        
+        
+        Console.WriteLine("------PLANO DE VIAGEM-----\n");
+        
+        Console.WriteLine("Diga três lugares que você gostaria de viajar: \n");
+
+        Console.Write("Local 1: ");
+        Viagem.local1 = Console.ReadLine();
+    
+        Console.Write("Local 2: ");
+        Viagem.local2 = Console.ReadLine();
+    
+        Console.Write("Local 3: ");
+        Viagem.local3 = Console.ReadLine();
+
+        Console.WriteLine("\n-------------------------------\n");
+        Console.WriteLine("\nVocê quer viajar para " + Viagem.local1 + ", " + Viagem.local2 + " e " + Viagem.local3 + ". Esses são ótimos destinos!");
+    
+        
+    } 
+    
+}
