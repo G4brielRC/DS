@@ -1,0 +1,29 @@
+class Veículo
+{
+    public void Acelerar()
+    {
+        Console.WriteLine("O Veículo está acelerando");
+
+    }
+}
+
+class Moto : Veículo
+{
+    public void Frenar()
+    {
+        Console.WriteLine("A moto está frenando");
+    }
+
+}
+
+class Program
+{
+    static void Main()
+    {
+        Moto motocicleta = new Moto();
+
+        motocicleta.Acelerar();
+        motocicleta.Frenar();
+    }
+
+}
