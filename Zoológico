@@ -1,64 +1,62 @@
 using System;
-using System.Collections.Generic;
 
-    interface IAnimal
-    {
-        string Tipo { get; }
-        string EmitirSom();
-    }
+interface IAnimal
+{
+    string Tipo { get; }
+    string EmitirSom();
+}
 
-    abstract class Animal : IAnimal
-    {
+abstract class Animal : IAnimal
+{
     public abstract string Tipo { get; }
-    
     public abstract string EmitirSom();
-    }
+}
 
-    class Leao : Animal { public override string Tipo => "leao"; public override string EmitirSom() => "ruge";}
-    
-    class Tigre : Animal { public override string Tipo => "tigre"; public override string EmitirSom() => "rosna"; }
-    
-    class Elefante : Animal { public override string Tipo => "elefante"; public override string EmitirSom() => "trombeteia"; }
-    
-    class Girafa : Animal { public override string Tipo => "girafa"; public override string EmitirSom() => "emite sons baixos"; }
-    
-    class Hipopotamo : Animal { public override string Tipo => "hipopotamo"; public override string EmitirSom() => "grunhe"; }
-    
-    class Zebra : Animal { public override string Tipo => "zebra"; public override string EmitirSom() => "relincha"; }
-    
-    class Gorila : Animal { public override string Tipo => "gorila"; public override string EmitirSom() => "grunhe"; }
-    
-    class Pinguim : Animal { public override string Tipo => "pinguim"; public override string EmitirSom() => "grasna"; }
-    
-    class Lobo : Animal { public override string Tipo => "lobo"; public override string EmitirSom() => "uiva"; }
-    
-    class Flamingo : Animal { public override string Tipo => "flamingo"; public override string EmitirSom() => "emite sons nasais"; }
+class Leao : Animal { public override string Tipo => "leao"; public override string EmitirSom() => "ruge"; }
+class Tigre : Animal { public override string Tipo => "tigre"; public override string EmitirSom() => "rosna"; }
+class Elefante : Animal { public override string Tipo => "elefante"; public override string EmitirSom() => "trombeteia"; }
+class Girafa : Animal { public override string Tipo => "girafa"; public override string EmitirSom() => "emite sons baixos"; }
+class Hipopotamo : Animal { public override string Tipo => "hipopotamo"; public override string EmitirSom() => "grunhe"; }
+class Zebra : Animal { public override string Tipo => "zebra"; public override string EmitirSom() => "relincha"; }
+class Gorila : Animal { public override string Tipo => "gorila"; public override string EmitirSom() => "grunhe"; }
+class Pinguim : Animal { public override string Tipo => "pinguim"; public override string EmitirSom() => "grasna"; }
+class Lobo : Animal { public override string Tipo => "lobo"; public override string EmitirSom() => "uiva"; }
+class Flamingo : Animal { public override string Tipo => "flamingo"; public override string EmitirSom() => "emite sons nasais"; }
 
-    class Program
+class Program
+{
+    static void Main()
     {
-        static void Main()
+        IAnimal[] animais = new IAnimal[]
         {
-            List<IAnimal> animais = new List<IAnimal>
-            {
-                new Leao(), new Tigre(), new Elefante(), new Girafa(), new Hipopotamo(),
-                new Zebra(), new Gorila(), new Pinguim(), new Lobo(), new Flamingo()
-            };
-    
+            new Leao(), new Tigre(), new Elefante(), new Girafa(), new Hipopotamo(),
+            new Zebra(), new Gorila(), new Pinguim(), new Lobo(), new Flamingo()
+        };
+
         while (true)
         {
             Console.Write("Digite o tipo de animal (ou 'sair'): ");
             string entrada = Console.ReadLine().ToLower();
-    
+
             if (entrada == "sair") break;
-    
-            IAnimal encontrado = animais.Find(a => a.Tipo == entrada);
-    
+
+            IAnimal encontrado = null;
+
+            foreach (var animal in animais)
+            {
+                if (animal.Tipo == entrada)
+                {
+                    encontrado = animal;
+                    break;
+                }
+            }
+
             if (encontrado != null)
                 Console.WriteLine($"O {entrada} {encontrado.EmitirSom()}.");
             else
                 Console.WriteLine("Animal não cadastrado.");
         }
-    
+
         Console.WriteLine("Encerrado");
     }
 }
