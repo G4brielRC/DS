@@ -13,14 +13,23 @@ abstract class Animal : IAnimal
 }
 
 class Leao : Animal { public override string Tipo => "leao"; public override string EmitirSom() => "ruge"; }
+
 class Tigre : Animal { public override string Tipo => "tigre"; public override string EmitirSom() => "rosna"; }
+
 class Elefante : Animal { public override string Tipo => "elefante"; public override string EmitirSom() => "trombeteia"; }
+
 class Girafa : Animal { public override string Tipo => "girafa"; public override string EmitirSom() => "emite sons baixos"; }
+
 class Hipopotamo : Animal { public override string Tipo => "hipopotamo"; public override string EmitirSom() => "grunhe"; }
+
 class Zebra : Animal { public override string Tipo => "zebra"; public override string EmitirSom() => "relincha"; }
+
 class Gorila : Animal { public override string Tipo => "gorila"; public override string EmitirSom() => "grunhe"; }
+
 class Pinguim : Animal { public override string Tipo => "pinguim"; public override string EmitirSom() => "grasna"; }
+
 class Lobo : Animal { public override string Tipo => "lobo"; public override string EmitirSom() => "uiva"; }
+
 class Flamingo : Animal { public override string Tipo => "flamingo"; public override string EmitirSom() => "emite sons nasais"; }
 
 class Program
